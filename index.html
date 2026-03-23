@@ -1,0 +1,1435 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Si Siempre Terminas Cediendo â€” David Academy</title>
+  <meta name="description" content="Un mÃ©todo de 7 dÃ­as para dejar de ser manipulado, sin confrontaciones, sin culpa y sin cambiar quiÃ©n eres. Solo $6 USD." />
+  <meta property="og:title" content="Si Siempre Terminas Cediendo â€” David Academy" />
+  <meta property="og:description" content="MÃ©todo de 7 dÃ­as para dejar de ser manipulado. +3.247 lectores. Solo $6 USD." />
+  <meta property="og:image" content="images/hero_visual.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-primary: #000000;
+      --bg-secondary: #09090B;
+      --bg-tertiary: #18181B;
+      --primary-400: #C084FC;
+      --primary-500: #A855F7;
+      --primary-600: #9333EA;
+      --primary-700: #7C3AED;
+      --primary-rgb: 168, 85, 247;
+      --text-primary: #FFFFFF;
+      --text-secondary: #E4E4E7;
+      --text-tertiary: #A1A1AA;
+      --success: #22C55E;
+      --danger: #EF4444;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.15;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* â”€â”€ ANIMACIONES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-18px) rotate(1.5deg); }
+      50% { transform: translateY(-8px) rotate(-1.5deg); }
+      75% { transform: translateY(-24px) rotate(1deg); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 0 0 1px rgba(var(--primary-rgb), 0.5),
+                    0 4px 24px rgba(var(--primary-rgb), 0.4),
+                    0 0 60px rgba(var(--primary-rgb), 0.2);
+      }
+      50% {
+        box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.8),
+                    0 8px 40px rgba(var(--primary-rgb), 0.6),
+                    0 0 80px rgba(var(--primary-rgb), 0.4);
+      }
+    }
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float-particle {
+      0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+      33%       { transform: translate(80px, -120px); opacity: 0.7; }
+      66%       { transform: translate(-60px, -200px); opacity: 0.5; }
+    }
+    @keyframes timer-pulse {
+      0%, 100% { color: var(--text-primary); }
+      50%       { color: var(--primary-400); }
+    }
+    @keyframes scale-in {
+      from { opacity: 0; transform: scale(0.85); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    /* â”€â”€ CLASES UTILITARIAS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section    { padding: 100px 0; }
+    .section-sm { padding: 60px 0; }
+
+    .label-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(var(--primary-rgb), 0.1);
+      border: 1px solid rgba(var(--primary-rgb), 0.25);
+      color: var(--primary-400);
+      padding: 6px 16px; border-radius: 100px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; margin-bottom: 24px;
+    }
+    .section-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700; color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 18px; color: var(--text-tertiary);
+      max-width: 600px; margin: 0 auto 60px;
+    }
+    .text-center { text-align: center; }
+    .glow-text {
+      text-shadow: 0 0 10px rgba(var(--primary-rgb), 0.8),
+                   0 0 20px rgba(var(--primary-rgb), 0.6),
+                   0 0 40px rgba(var(--primary-rgb), 0.4);
+      color: var(--primary-400);
+    }
+
+    .glass-card {
+      background: linear-gradient(135deg,
+        rgba(var(--primary-rgb), 0.08) 0%,
+        rgba(var(--primary-rgb), 0.04) 50%,
+        rgba(var(--primary-rgb), 0.08) 100%);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid rgba(var(--primary-rgb), 0.15);
+      border-radius: 24px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(var(--primary-rgb), 0.35);
+      box-shadow: 0 25px 50px -12px rgba(var(--primary-rgb), 0.25);
+      transform: translateY(-4px);
+    }
+
+    /* â”€â”€ BOTONES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--primary-700), var(--primary-500), var(--primary-400), var(--primary-500));
+      background-size: 300% 300%;
+      animation: gradient-shift 4s ease infinite, pulse-glow 3s ease-in-out infinite;
+      color: #fff; font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700; font-size: 16px;
+      padding: 18px 36px; border-radius: 14px;
+      border: none; cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      text-decoration: none; white-space: nowrap;
+    }
+    .btn-primary:hover { transform: translateY(-3px) scale(1.02); filter: brightness(1.1); }
+    .btn-primary.btn-xl { font-size: 20px; padding: 22px 48px; border-radius: 16px; }
+    .btn-primary.btn-full { width: 100%; }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--primary-400); font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600; font-size: 16px;
+      padding: 18px 36px; border-radius: 14px;
+      border: 1px solid rgba(var(--primary-rgb), 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      background: rgba(var(--primary-rgb), 0.08);
+      border-color: var(--primary-500);
+      transform: translateY(-2px);
+    }
+
+    /* â”€â”€ NAVBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .navbar {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      padding: 20px 0;
+      transition: all 0.3s ease;
+    }
+    .navbar.scrolled {
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(var(--primary-rgb), 0.1);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+      padding: 14px 0;
+    }
+    .navbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .navbar-logo {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .navbar-logo img { height: 40px; width: auto; }
+    .navbar-logo-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800; font-size: 18px; color: var(--text-primary);
+    }
+    .navbar-links {
+      display: flex; align-items: center; gap: 32px;
+      list-style: none;
+    }
+    .navbar-links a {
+      font-size: 14px; font-weight: 500; color: var(--text-tertiary);
+      transition: color 0.2s; position: relative;
+    }
+    .navbar-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 2px; background: var(--primary-500);
+      transition: width 0.3s ease;
+    }
+    .navbar-links a:hover { color: var(--text-primary); }
+    .navbar-links a:hover::after { width: 100%; }
+    .navbar-cta { display: flex; align-items: center; }
+
+    /* â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding-top: 100px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background: radial-gradient(ellipse at 60% 50%, rgba(var(--primary-rgb), 0.12) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(var(--primary-rgb), 0.06) 0%, transparent 50%);
+    }
+    .particles-container {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    }
+    .particle {
+      position: absolute; border-radius: 50%;
+      background: rgba(var(--primary-rgb), 0.6);
+      animation: float-particle 20s infinite ease-in-out;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+    }
+    .hero-content { animation: fade-in-up 0.9s cubic-bezier(0.16,1,0.3,1) forwards; }
+    .hero-title {
+      font-size: clamp(40px, 5.5vw, 68px);
+      font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px; color: var(--text-primary);
+    }
+    .hero-subtitle {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-secondary); line-height: 1.7;
+      margin-bottom: 40px; max-width: 480px;
+    }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+    .hero-trust {
+      display: flex; gap: 20px; flex-wrap: wrap;
+      font-size: 13px; color: var(--text-tertiary);
+    }
+    .hero-trust span { display: flex; align-items: center; gap: 6px; }
+    .hero-visual {
+      display: flex; justify-content: center; align-items: center;
+      position: relative;
+      animation: fade-in-up 1.2s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+    }
+    .hero-visual img {
+      width: 100%; max-width: 520px;
+      animation: float 6s ease-in-out infinite;
+      filter: drop-shadow(0 0 40px rgba(var(--primary-rgb), 0.5))
+              drop-shadow(0 0 80px rgba(var(--primary-rgb), 0.3));
+      border-radius: 24px;
+    }
+    .hero-visual-glow {
+      position: absolute; width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(var(--primary-rgb), 0.2) 0%, transparent 70%);
+      pointer-events: none; z-index: -1;
+    }
+
+    /* â”€â”€ SOCIAL PROOF BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .proof-bar {
+      background: var(--bg-secondary);
+      border-top: 1px solid rgba(var(--primary-rgb), 0.1);
+      border-bottom: 1px solid rgba(var(--primary-rgb), 0.1);
+      padding: 24px 0;
+    }
+    .proof-bar-inner {
+      display: flex; justify-content: center; align-items: center;
+      gap: 48px; flex-wrap: wrap;
+    }
+    .proof-item {
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+    }
+    .proof-number {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 28px; font-weight: 800; color: var(--primary-400);
+    }
+    .proof-label { font-size: 13px; color: var(--text-tertiary); }
+    .proof-divider { width: 1px; height: 40px; background: rgba(var(--primary-rgb),0.2); }
+
+    /* â”€â”€ DOLOR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .pain-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px; margin-bottom: 60px;
+    }
+    .pain-card {
+      padding: 32px;
+      background: linear-gradient(135deg,
+        rgba(239,68,68,0.06) 0%,
+        rgba(239,68,68,0.02) 100%);
+      border: 1px solid rgba(239,68,68,0.15);
+      border-radius: 24px;
+      transition: all 0.4s ease;
+    }
+    .pain-card:hover { border-color: rgba(239,68,68,0.3); transform: translateY(-4px); }
+    .pain-emoji { font-size: 36px; margin-bottom: 16px; display: block; }
+    .pain-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 20px; font-weight: 700;
+      color: var(--text-primary); margin-bottom: 12px;
+    }
+    .pain-text { color: var(--text-tertiary); line-height: 1.7; }
+    .pain-question {
+      text-align: center; padding: 48px 24px;
+      background: var(--bg-secondary);
+      border-radius: 24px;
+      border: 1px solid rgba(var(--primary-rgb), 0.1);
+    }
+    .pain-question p { color: var(--text-secondary); font-size: 18px; margin-bottom: 24px; }
+    .pain-question-big {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 800; font-style: italic;
+    }
+
+    /* â”€â”€ VERDAD â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .truth-section { background: var(--bg-secondary); }
+    .truth-text {
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: var(--text-secondary); line-height: 1.8;
+      max-width: 700px; margin: 0 auto 48px;
+      text-align: center;
+    }
+    .truth-card {
+      max-width: 700px; margin: 0 auto 48px; padding: 40px;
+    }
+    .truth-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--primary-400); margin-bottom: 16px;
+    }
+    .truth-card h3 {
+      font-size: 26px; font-weight: 800; color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+    .truth-card p { color: var(--text-secondary); line-height: 1.8; }
+    .pills {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      justify-content: center; margin-top: 40px;
+    }
+    .pill {
+      padding: 10px 22px; border-radius: 100px;
+      background: rgba(var(--primary-rgb), 0.1);
+      border: 1px solid rgba(var(--primary-rgb), 0.25);
+      color: var(--primary-400); font-size: 14px; font-weight: 600;
+    }
+
+    /* â”€â”€ MÃ‰TODO TIMELINE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+    .timeline::before {
+      content: ''; position: absolute; left: 60px; top: 0; bottom: 0;
+      width: 2px; background: linear-gradient(180deg, var(--primary-700), var(--primary-500), var(--primary-400));
+    }
+    .timeline-item {
+      display: flex; gap: 32px; margin-bottom: 40px; align-items: flex-start;
+      opacity: 0; transform: translateX(-20px);
+      transition: all 0.5s ease;
+    }
+    .timeline-item.visible { opacity: 1; transform: translateX(0); }
+    .timeline-day {
+      flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px; font-weight: 800; color: #fff;
+      text-align: center; line-height: 1.2;
+      box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.4);
+      position: relative; z-index: 1;
+    }
+    .timeline-content { flex: 1; padding: 28px; margin-top: 4px; }
+    .timeline-phase {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--primary-400); margin-bottom: 8px;
+    }
+    .timeline-content h3 {
+      font-size: 20px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;
+    }
+    .timeline-content p { color: var(--text-secondary); line-height: 1.7; }
+    .timeline-cta { text-align: center; margin-top: 56px; }
+
+    /* â”€â”€ FLIP CARDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .benefits-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+    }
+    .flip-card {
+      height: 320px; perspective: 1000px; cursor: pointer;
+    }
+    .flip-card-inner {
+      position: relative; width: 100%; height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .flip-card:hover .flip-card-inner,
+    .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+    .flip-card-front, .flip-card-back {
+      position: absolute; inset: 0; border-radius: 24px; overflow: hidden;
+      -webkit-backface-visibility: hidden; backface-visibility: hidden;
+    }
+    .flip-card-front {
+      background: var(--bg-tertiary);
+      border: 1px solid rgba(var(--primary-rgb), 0.15);
+    }
+    .flip-card-front img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .flip-card:hover .flip-card-front img { transform: scale(1.05); }
+    .flip-card-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 24px;
+      background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+    }
+    .flip-card-overlay h3 {
+      font-size: 20px; font-weight: 700; color: #fff;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+      padding: 32px; display: flex; flex-direction: column;
+      justify-content: center; gap: 16px;
+      background: linear-gradient(135deg,
+        rgba(var(--primary-rgb), 0.12),
+        rgba(var(--primary-rgb), 0.06));
+      border: 1px solid rgba(var(--primary-rgb), 0.25);
+    }
+    .flip-card-back h3 {
+      font-size: 20px; font-weight: 700; color: var(--text-primary);
+    }
+    .flip-card-back p { color: var(--text-secondary); line-height: 1.7; font-size: 15px; }
+    .flip-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .flip-tag {
+      padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600;
+      background: rgba(var(--primary-rgb), 0.15);
+      border: 1px solid rgba(var(--primary-rgb), 0.25);
+      color: var(--primary-400);
+    }
+    .flip-hint {
+      text-align: center; margin-top: 20px;
+      font-size: 13px; color: var(--text-tertiary);
+    }
+
+    /* â”€â”€ QUÃ‰ INCLUYE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .includes-section { background: var(--bg-secondary); }
+    .includes-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px; margin-bottom: 48px;
+    }
+    .include-card { padding: 32px; }
+    .include-icon { font-size: 36px; margin-bottom: 16px; display: block; }
+    .include-card h3 {
+      font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;
+    }
+    .include-card p { color: var(--text-tertiary); line-height: 1.7; }
+    .delivery-badge {
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(var(--primary-rgb), 0.08);
+      border: 1px solid rgba(var(--primary-rgb), 0.2);
+      border-radius: 16px; padding: 20px 28px;
+      max-width: 600px; margin: 0 auto 48px;
+      font-size: 15px; color: var(--text-secondary);
+    }
+
+    /* â”€â”€ TESTIMONIOS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px; margin-bottom: 48px;
+    }
+    .testimonial-card { padding: 32px; }
+    .stars { color: #FBBF24; font-size: 18px; margin-bottom: 16px; letter-spacing: 2px; }
+    .testimonial-quote {
+      font-size: 16px; color: var(--text-secondary);
+      line-height: 1.8; font-style: italic; margin-bottom: 24px;
+    }
+    .testimonial-quote::before { content: '"'; color: var(--primary-400); font-size: 24px; }
+    .testimonial-quote::after  { content: '"'; color: var(--primary-400); font-size: 24px; }
+    .testimonial-author { display: flex; align-items: center; gap: 14px; }
+    .author-avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-400));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800; font-size: 18px; color: #fff;
+      border: 2px solid var(--primary-500);
+      flex-shrink: 0;
+    }
+    .author-name {
+      font-weight: 700; color: var(--text-primary); font-size: 15px;
+    }
+    .author-detail { font-size: 13px; color: var(--text-tertiary); }
+    .proof-stats-bar {
+      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+      padding: 32px 24px;
+      background: rgba(var(--primary-rgb), 0.05);
+      border: 1px solid rgba(var(--primary-rgb), 0.1);
+      border-radius: 20px;
+    }
+    .proof-stat { text-align: center; }
+    .proof-stat-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 28px; font-weight: 800; color: var(--primary-400);
+    }
+    .proof-stat-label { font-size: 13px; color: var(--text-tertiary); margin-top: 4px; }
+
+    /* â”€â”€ URGENCIA + PRECIO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .urgency-section {
+      background: radial-gradient(ellipse at center, rgba(var(--primary-rgb), 0.15) 0%, transparent 70%),
+                  var(--bg-secondary);
+      border-top: 1px solid rgba(var(--primary-rgb), 0.15);
+      border-bottom: 1px solid rgba(var(--primary-rgb), 0.15);
+    }
+    .timer-wrapper {
+      display: flex; justify-content: center; gap: 16px; margin: 40px 0;
+      flex-wrap: wrap;
+    }
+    .timer-block {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .timer-digit {
+      background: var(--bg-tertiary);
+      border: 1px solid rgba(var(--primary-rgb), 0.3);
+      border-radius: 16px;
+      width: 100px; height: 100px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 44px; font-weight: 800; color: var(--primary-400);
+      animation: timer-pulse 1s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.15);
+    }
+    .timer-label { font-size: 12px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.1em; }
+    .timer-colon {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 48px; font-weight: 800; color: var(--primary-400);
+      padding-top: 20px;
+    }
+    .price-display {
+      text-align: center; margin: 40px 0;
+    }
+    .price-old {
+      font-size: 24px; color: var(--text-tertiary);
+      text-decoration: line-through; margin-bottom: 8px;
+    }
+    .price-current {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(56px, 8vw, 80px); font-weight: 800;
+      color: var(--text-primary);
+      text-shadow: 0 0 30px rgba(var(--primary-rgb), 0.6);
+      line-height: 1;
+    }
+    .price-current span { color: var(--primary-400); }
+    .price-subtitle { font-size: 16px; color: var(--text-tertiary); margin-top: 12px; }
+    .urgency-cta { text-align: center; }
+    .urgency-trust {
+      margin-top: 20px; font-size: 14px; color: var(--text-tertiary);
+      display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+    }
+    .urgency-trust span { display: flex; align-items: center; gap: 6px; }
+
+    /* â”€â”€ GARANTÃA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .guarantee-card {
+      max-width: 700px; margin: 0 auto; padding: 48px;
+      border: 1px solid rgba(34,197,94,0.25);
+      background: rgba(34,197,94,0.04);
+      text-align: center;
+    }
+    .guarantee-icon { font-size: 72px; margin-bottom: 24px; display: block; }
+    .guarantee-card h2 {
+      font-size: 32px; font-weight: 800; color: var(--text-primary); margin-bottom: 8px;
+    }
+    .guarantee-card h3 {
+      font-size: 18px; font-weight: 600; color: var(--success); margin-bottom: 24px;
+    }
+    .guarantee-card p {
+      color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;
+      font-size: 17px;
+    }
+    .guarantee-inner {
+      margin-top: 32px; padding: 28px; border-radius: 16px;
+      background: rgba(var(--primary-rgb), 0.06);
+      border: 1px solid rgba(var(--primary-rgb), 0.15);
+    }
+    .guarantee-inner-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--primary-400); margin-bottom: 12px;
+    }
+    .guarantee-inner p { font-size: 15px; color: var(--text-secondary); margin: 0; }
+    .guarantee-final {
+      margin-top: 24px; font-size: 18px; font-weight: 700; color: var(--text-primary);
+    }
+
+    /* â”€â”€ COMPARACIÃ“N â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .comparison-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      max-width: 800px; margin: 0 auto 56px;
+    }
+    .comparison-col { padding: 36px; border-radius: 24px; }
+    .comparison-bad {
+      background: rgba(239,68,68,0.06);
+      border: 1px solid rgba(239,68,68,0.2);
+    }
+    .comparison-good {
+      background: rgba(var(--primary-rgb), 0.08);
+      border: 2px solid rgba(var(--primary-rgb), 0.35);
+      box-shadow: 0 0 40px rgba(var(--primary-rgb), 0.1);
+    }
+    .comparison-col h3 {
+      font-size: 16px; font-weight: 700; margin-bottom: 24px; letter-spacing: 0.05em;
+    }
+    .comparison-bad h3 { color: #EF4444; }
+    .comparison-good h3 { color: var(--primary-400); }
+    .comparison-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      margin-bottom: 14px; font-size: 15px; color: var(--text-secondary);
+    }
+    .comparison-item span { flex: 1; }
+    .comparison-cta { text-align: center; }
+    .postdata {
+      margin-top: 40px; padding: 28px;
+      background: rgba(var(--primary-rgb), 0.05);
+      border: 1px solid rgba(var(--primary-rgb), 0.1);
+      border-radius: 16px; max-width: 700px; margin: 40px auto 0;
+      color: var(--text-tertiary); font-size: 15px; line-height: 1.8;
+    }
+    .postdata strong { color: var(--text-secondary); }
+
+    /* â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid rgba(var(--primary-rgb), 0.1);
+      padding: 60px 0 32px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand { }
+    .footer-logo {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+    }
+    .footer-logo img { height: 32px; width: auto; }
+    .footer-logo-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800; font-size: 16px;
+    }
+    .footer-tagline { color: var(--text-tertiary); font-size: 14px; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: rgba(var(--primary-rgb), 0.1);
+      border: 1px solid rgba(var(--primary-rgb), 0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; transition: all 0.3s ease;
+    }
+    .footer-social a:hover {
+      background: rgba(var(--primary-rgb), 0.2);
+      border-color: var(--primary-500);
+      transform: translateY(-2px);
+    }
+    .footer-col h4 {
+      font-size: 13px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-tertiary); margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block; font-size: 14px; color: var(--text-tertiary);
+      margin-bottom: 10px; transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--primary-400); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-copy { font-size: 13px; color: var(--text-tertiary); }
+    .footer-cta-small .btn-primary { padding: 10px 24px; font-size: 14px; border-radius: 10px; }
+
+    /* â”€â”€ REVEAL SCROLL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* â”€â”€ MOBILE Y CORRECCIONES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .hamburger { display: none; font-size: 24px; cursor: pointer; background: none; border: none; color: var(--text-primary); }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-ctas { justify-content: center; }
+      .hero-trust { justify-content: center; }
+      .hero-visual { display: none; }
+      .navbar-links { display: none; }
+      
+      /* FIX HUMBURGUER MENU */
+      .navbar-links.active { 
+        display:flex; flex-direction:column; position:absolute; 
+        top:100%; left:0; right:0; background:rgba(0,0,0,0.95); 
+        padding:24px; gap:16px; border-bottom:1px solid rgba(168,85,247,0.2); 
+        z-index:999; 
+      }
+      
+      .hamburger { display: block; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .timer-digit { width: 72px; height: 72px; font-size: 32px; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 64px 0; }
+      .proof-bar-inner { gap: 24px; }
+      .proof-divider { display: none; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .timer-digit { width: 60px; height: 60px; font-size: 26px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       NAVBAR
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="#inicio" class="navbar-logo">
+          <img src="images/logo.png" alt="David Academy" onerror="this.style.display='none'" />
+          <span class="navbar-logo-text">David Academy</span>
+        </a>
+        <ul class="navbar-links">
+          <li><a href="#metodo">El MÃ©todo</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#garantia">GarantÃ­a</a></li>
+        </ul>
+        <div class="navbar-cta">
+          <a href="https://pay.hotmart.com/M104525562T?checkoutMode=10"
+             target="_blank" class="btn-primary" style="padding:12px 24px;font-size:14px;border-radius:10px;">
+            Quiero el libro â€” $6
+          </a>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()">â˜°</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       HERO
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="particles-container" id="particles"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="label-tag">âš¡ Sistema probado por +3.247 lectores</div>
+          <h1 class="hero-title">
+            Si siempre terminas cediendoâ€¦<br/>
+            no es porque seas <span class="glow-text">dÃ©bil.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Es porque te estÃ¡n usando.<br/>
+            Un mÃ©todo de 7 dÃ­as para dejar de ser manipulado,
+            sin confrontaciones, sin culpa y sin cambiar quiÃ©n eres.
+          </p>
+          <div class="hero-ctas">
+            <a href="https://pay.hotmart.com/M104525562T?checkoutMode=10"
+               target="_blank" class="btn-primary btn-xl">
+              ðŸ“¥ Descargar el libro ahora â€” $6
+            </a>
+            <a href="#metodo" class="btn-outline">
+              Ver cÃ³mo funciona â†’
+            </a>
+          </div>
+          <div class="hero-trust">
+            <span>ðŸ”’ Acceso inmediato</span>
+            <span>âœ… GarantÃ­a 7 dÃ­as</span>
+            <span>ðŸ’œ +3.247 lectores</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-glow"></div>
+          <img src="images/hero_visual.png"
+               alt="Recupera tu poder mental"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\' viewBox=\'0 0 400 400\'><rect width=\'400\' height=\'400\' fill=\'%2309090B\' rx=\'24\'/><text x=\'50%25\' y=\'45%25\' font-family=\'sans-serif\' font-size=\'80\' text-anchor=\'middle\' fill=\'%23A855F7\'>ðŸ§ </text><text x=\'50%25\' y=\'65%25\' font-family=\'sans-serif\' font-size=\'20\' text-anchor=\'middle\' fill=\'%23E4E4E7\'>David Academy</text></svg>'" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       SOCIAL PROOF BAR
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <div class="proof-bar">
+    <div class="container">
+      <div class="proof-bar-inner">
+        <div class="proof-item">
+          <span class="proof-number">+3.247</span>
+          <span class="proof-label">Lectores activos</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-number">7</span>
+          <span class="proof-label">DÃ­as para ver resultados</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-number">â­ 4.9</span>
+          <span class="proof-label">ValoraciÃ³n media</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-number">$6</span>
+          <span class="proof-label">Precio de lanzamiento</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       SECCIÃ“N DOLOR
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section" id="dolor">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="label-tag">ðŸ˜” Â¿TE IDENTIFICAS?</div>
+        <h2 class="section-title">Â¿Te suena familiar?</h2>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card reveal">
+          <span class="pain-emoji">ðŸ˜”</span>
+          <h3 class="pain-title">"Otra vez cedÃ­"</h3>
+          <p class="pain-text">Sabes que no deberÃ­as haber dicho que sÃ­. Pero lo hiciste. Y ahora cargas con algo que no querÃ­as hacer, con alguien que no respeta tu tiempo.</p>
+        </div>
+        <div class="pain-card reveal">
+          <span class="pain-emoji">ðŸŽ¯</span>
+          <h3 class="pain-title">"SabÃ­a que algo estaba mal"</h3>
+          <p class="pain-text">Detectas la manipulaciÃ³nâ€¦ pero tarde. Cuando ya dijiste que sÃ­, cuando ya te comprometiste, cuando ya perdiste el control de la situaciÃ³n.</p>
+        </div>
+        <div class="pain-card reveal">
+          <span class="pain-emoji">ðŸ˜¤</span>
+          <h3 class="pain-title">"No querÃ­a, peroâ€¦"</h3>
+          <p class="pain-text">Terminas haciendo cosas que no quieres. Te adaptas. Cedes. Y despuÃ©s te preguntas por quÃ© siempre eres tÃº quien sacrifica lo que necesita.</p>
+        </div>
+      </div>
+      <div class="pain-question reveal">
+        <p>No es que no veas la manipulaciÃ³n. La vesâ€¦ pero cuando ya dijiste que sÃ­. Cuando ya es tarde para retroceder sin sentirte culpable. Y cada vez que pasa, una vocecita te pregunta:</p>
+        <div class="pain-question-big glow-text">"Â¿El problema soy yo?"</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       SECCIÃ“N VERDAD
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section truth-section" id="verdad">
+    <div class="container text-center">
+      <div class="reveal">
+        <div class="label-tag">ðŸ’¡ LA VERDAD</div>
+        <h2 class="section-title">DÃ©jame decirte algo que nadie te ha dicho</h2>
+      </div>
+      <p class="truth-text reveal">
+        No te manipulan porque seas dÃ©bil.<br/>
+        Te manipulan porque eres <strong style="color:var(--primary-400)">consciente, empÃ¡tico y consideras los sentimientos de los demÃ¡s.</strong><br/>
+        Esas cualidades son valiosas. El problema no eres tÃº.
+      </p>
+      <div class="truth-card glass-card reveal">
+        <p class="truth-label">âš¡ LA VERDAD INCÃ“MODA</p>
+        <h3>La manipulaciÃ³n no es aleatoria.</h3>
+        <p>Sigue patrones predecibles. Siempre usa los mismos gatillos: culpa, miedo, confusiÃ³n, urgencia falsa. Y cuando conoces esos patrones, cuando sabes identificarlos en tiempo real, todo cambia. Dejas de ser vulnerable. Recuperas tu poder de decisiÃ³n.</p>
+      </div>
+      <div class="pills reveal">
+        <span class="pill">âœ“ Sin confrontar</span>
+        <span class="pill">âœ“ Sin volverte insensible</span>
+        <span class="pill">âœ“ Sin perder tu esencia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       SECCIÃ“N MÃ‰TODO
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section" id="metodo">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="label-tag">ðŸ“– EL SISTEMA</div>
+        <h2 class="section-title">El Sistema de 7 DÃ­as</h2>
+        <p class="section-subtitle">No es teorÃ­a psicolÃ³gica. Es un mÃ©todo paso a paso, diseÃ±ado para que en una semana recuperes tu poder.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-day">DÃA<br/>1-2</div>
+          <div class="timeline-content glass-card">
+            <p class="timeline-phase">ðŸ” FASE 1</p>
+            <h3>Detectar</h3>
+            <p>Aprende a reconocer las 7 tÃ©cnicas de manipulaciÃ³n mÃ¡s comunes en menos de 3 segundos. Tu radar interno se activa automÃ¡ticamente.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">DÃA<br/>3-4</div>
+          <div class="timeline-content glass-card">
+            <p class="timeline-phase">ðŸ›¡ï¸ FASE 2</p>
+            <h3>Neutralizar</h3>
+            <p>Descubre cÃ³mo desarmar cada tÃ©cnica sin discutir, sin justificarte, sin entrar en el juego del manipulador. TÃ©cnicas especÃ­ficas para cada situaciÃ³n.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">DÃA<br/>5-6</div>
+          <div class="timeline-content glass-card">
+            <p class="timeline-phase">ðŸ’¬ FASE 3</p>
+            <h3>Responder</h3>
+            <p>Frases exactas para establecer lÃ­mites sin culpa. Scripts probados que mantienen tu poder sin confrontaciÃ³n directa.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">DÃA<br/>7</div>
+          <div class="timeline-content glass-card">
+            <p class="timeline-phase">ðŸ”’ FASE 4</p>
+            <h3>Blindar</h3>
+            <p>Automatiza tus nuevos lÃ­mites mentales. Crea un sistema de defensa emocional que funciona incluso bajo presiÃ³n o culpa inducida.</p>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-cta reveal">
+        <a href="https://pay.hotmart.com/M104525562T?checkoutMode=10"
+           target="_blank" class="btn-primary btn-xl">
+          Quiero empezar hoy â€” $6
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       SECCIÃ“N BENEFICIOS (FLIP CARDS)
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section" id="beneficios" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="label-tag">âœ¨ LO QUE OBTIENES</div>
+        <h2 class="section-title">Cambios reales en los prÃ³ximos 7 dÃ­as</h2>
+        <p class="section-subtitle">No son beneficios teÃ³ricos. Son transformaciones que experimentarÃ¡s. <em style="color:var(--primary-400)">(Pasa el cursor sobre cada tarjeta)</em></p>
+      </div>
+      <div class="benefits-grid">
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/benefit_1.png" alt="Claridad InstantÃ¡nea"
+                   onerror="this.parentElement.style.background='linear-gradient(135deg,#1a0533,#2d1060)';this.style.display='none'" />
+              <div class="flip-card-overlay"><h3>Claridad InstantÃ¡nea</h3></div>
+            </div>
+            <div class="flip-card-back">
+              <h3>Claridad InstantÃ¡nea</h3>
+              <p>Reconoces manipulaciÃ³n en segundos, no horas despuÃ©s cuando ya es tarde. Tu radar interno se activa de forma automÃ¡tica.</p>
+              <div class="flip-tags">
+                <span class="flip-tag">DetecciÃ³n</span>
+                <span class="flip-tag">Tiempo real</span>
+                <span class="flip-tag">Radar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/benefit_2.png" alt="AdiÃ³s a la Culpa"
+                   onerror="this.parentElement.style.background='linear-gradient(135deg,#1a0533,#2d1060)';this.style.display='none'" />
+              <div class="flip-card-overlay"><h3>AdiÃ³s a la Culpa</h3></div>
+            </div>
+            <div class="flip-card-back">
+              <h3>AdiÃ³s a la Culpa</h3>
+              <p>Dices "no" sin sentir que estÃ¡s siendo egoÃ­sta o malo. Estableces lÃ­mites con calma y seguridad total.</p>
+              <div class="flip-tags">
+                <span class="flip-tag">Sin culpa</span>
+                <span class="flip-tag">LÃ­mites</span>
+                <span class="flip-tag">Poder</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/benefit_3.png" alt="Calma Mental"
+                   onerror="this.parentElement.style.background='linear-gradient(135deg,#1a0533,#2d1060)';this.style.display='none'" />
+              <div class="flip-card-overlay"><h3>Calma Mental</h3></div>
+            </div>
+            <div class="flip-card-back">
+              <h3>Calma Mental</h3>
+              <p>Mantienes tu centro cuando otros intentan desestabilizarte. Tu estado interno ya no depende de las acciones de los demÃ¡s.</p>
+              <div class="flip-tags">
+                <span class="flip-tag">Control</span>
+                <span class="flip-tag">Estabilidad</span>
+                <span class="flip-tag">Foco</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/benefit_4.png" alt="Respeto AutomÃ¡tico"
+                   onerror="this.parentElement.style.background='linear-gradient(135deg,#1a0533,#2d1060)';this.style.display='none'" />
+              <div class="flip-card-overlay"><h3>Respeto AutomÃ¡tico</h3></div>
+            </div>
+            <div class="flip-card-back">
+              <h3>Respeto AutomÃ¡tico</h3>
+              <p>La gente deja de intentar manipularte porque ya no funciona. El respeto llega sin pedirlo ni exigirlo.</p>
+              <div class="flip-tags">
+                <span class="flip-tag">Respeto</span>
+                <span class="flip-tag">Autoridad</span>
+                <span class="flip-tag">LÃ­mites</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/benefit_5.png" alt="MÃ¡s EnergÃ­a"
+                   onerror="this.parentElement.style.background='linear-gradient(135deg,#1a0533,#2d1060)';this.style.display='none'" />
+              <div class="flip-card-overlay"><h3>MÃ¡s EnergÃ­a</h3></div>
+            </div>
+            <div class="flip-card-back">
+              <h3>MÃ¡s EnergÃ­a</h3>
+              <p>Dejas de gastar recursos mentales en situaciones que no elegiste. Recuperas horas y energÃ­a para lo que realmente importa.</p>
+              <div class="flip-tags">
+                <span class="flip-tag">EnergÃ­a</span>
+                <span class="flip-tag">Enfoque</span>
+                <span class="flip-tag">Tiempo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/benefit_6.png" alt="Mejor Rendimiento"
+                   onerror="this.parentElement.style.background='linear-gradient(135deg,#1a0533,#2d1060)';this.style.display='none'" />
+              <div class="flip-card-overlay"><h3>Mejor Rendimiento</h3></div>
+            </div>
+            <div class="flip-card-back">
+              <h3>Mejor Rendimiento</h3>
+              <p>Recuperas tiempo, enfoque y poder de decisiÃ³n real. Tu productividad sube de inmediato al dejar de cargar lo que no te pertenece.</p>
+              <div class="flip-tags">
+                <span class="flip-tag">Rendimiento</span>
+                <span class="flip-tag">Decisiones</span>
+                <span class="flip-tag">Productividad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="flip-hint reveal" style="margin-top:16px">ðŸ“± En mÃ³vil: toca la tarjeta para voltearla</p>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       QUÃ‰ INCLUYE
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section includes-section" id="incluye">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="label-tag">ðŸ“¦ CONTENIDO</div>
+        <h2 class="section-title">QuÃ© incluye el libro</h2>
+        <p class="section-subtitle">Todo lo que necesitas para aplicar el mÃ©todo desde el dÃ­a 1.</p>
+      </div>
+      <div class="includes-grid">
+        <div class="include-card glass-card reveal">
+          <span class="include-icon">ðŸ“…</span>
+          <h3>Sistema completo de 7 dÃ­as</h3>
+          <p>MetodologÃ­a paso a paso, con ejercicios diarios y ejemplos reales de cada tÃ©cnica de manipulaciÃ³n.</p>
+        </div>
+        <div class="include-card glass-card reveal">
+          <span class="include-icon">ðŸ’¬</span>
+          <h3>Scripts de respuesta probados</h3>
+          <p>Frases exactas para trabajo, pareja, familia, amigos. Listas para usar sin improvisaciÃ³n.</p>
+        </div>
+        <div class="include-card glass-card reveal">
+          <span class="include-icon">ðŸ—ºï¸</span>
+          <h3>Mapa de patrones de manipulaciÃ³n</h3>
+          <p>GuÃ­a visual de las 7 tÃ©cnicas mÃ¡s usadas, con seÃ±ales de alerta y respuestas especÃ­ficas para cada una.</p>
+        </div>
+        <div class="include-card glass-card reveal">
+          <span class="include-icon">ðŸ”’</span>
+          <h3>Sistema de blindaje emocional</h3>
+          <p>Protocolo para mantener lÃ­mites claros sin esfuerzo consciente, incluso bajo presiÃ³n o culpa inducida.</p>
+        </div>
+      </div>
+      <div class="delivery-badge reveal">
+        <span style="font-size:24px">âš¡</span>
+        <span><strong style="color:var(--text-primary)">Acceso inmediato</strong> â€” Recibes el libro en PDF en tu correo al instante. Puedes empezar hoy mismo.</span>
+      </div>
+      <div class="text-center reveal">
+        <a href="https://pay.hotmart.com/M104525562T?checkoutMode=10"
+           target="_blank" class="btn-primary btn-xl">
+          Obtener acceso inmediato â€” $6
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       TESTIMONIOS
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section" id="testimonios">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="label-tag">â­ TESTIMONIOS</div>
+        <h2 class="section-title">Miles de personas ya recuperaron su poder</h2>
+        <p class="section-subtitle">Sin volverse frÃ­as. Sin perder su esencia. Solo dejando de ser vulnerables.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card reveal">
+          <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+          <p class="testimonial-quote">No cambiÃ© mi personalidad. Solo dejÃ© de ser manipulable. Ahora veo los patrones antes de caer en ellos y respondo desde la claridad, no desde la culpa.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">L</div>
+            <div>
+              <div class="author-name">Laura M.</div>
+              <div class="author-detail">34 aÃ±os Â· PsicÃ³loga</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card reveal">
+          <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+          <p class="testimonial-quote">Por primera vez en aÃ±os, puse un lÃ­mite sin sentirme mal. Y funcionÃ³. La otra persona lo aceptÃ³ sin drama. El mÃ©todo es simple pero increÃ­blemente efectivo.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div>
+              <div class="author-name">Javier R.</div>
+              <div class="author-detail">29 aÃ±os Â· Emprendedor</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card reveal">
+          <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
+          <p class="testimonial-quote">PensÃ© que era yo el problema. Resulta que solo necesitaba entender cÃ³mo funciona la manipulaciÃ³n. Ahora reconozco las seÃ±ales al instante y actÃºo diferente.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">C</div>
+            <div>
+              <div class="author-name">Carmen S.</div>
+              <div class="author-detail">41 aÃ±os Â· Directora de RRHH</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proof-stats-bar reveal">
+        <div class="proof-stat">
+          <div class="proof-stat-num">+3.247</div>
+          <div class="proof-stat-label">Lectores activos</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-stat-num">â­ 4.9/5</div>
+          <div class="proof-stat-label">ValoraciÃ³n media</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-stat-num">7 dÃ­as</div>
+          <div class="proof-stat-label">Para ver resultados</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       URGENCIA + PRECIO + COUNTDOWN
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section urgency-section" id="precio">
+    <div class="container text-center">
+      <div class="reveal">
+        <div class="label-tag">â³ OFERTA DE LANZAMIENTO</div>
+        <h2 class="section-title">Esta oferta no estarÃ¡ disponible por mucho tiempo</h2>
+        <p style="color:var(--text-tertiary);margin-bottom:8px">El precio de $6 USD es solo por las prÃ³ximas 48 horas. DespuÃ©s sube a $19 USD.</p>
+      </div>
+
+      <div class="timer-wrapper reveal">
+        <div class="timer-block">
+          <div class="timer-digit" id="timer-hours">47</div>
+          <div class="timer-label">Horas</div>
+        </div>
+        <div class="timer-colon">:</div>
+        <div class="timer-block">
+          <div class="timer-digit" id="timer-minutes">59</div>
+          <div class="timer-label">Minutos</div>
+        </div>
+        <div class="timer-colon">:</div>
+        <div class="timer-block">
+          <div class="timer-digit" id="timer-seconds">59</div>
+          <div class="timer-label">Segundos</div>
+        </div>
+      </div>
+
+      <div class="price-display reveal">
+        <p class="price-old">Precio regular: $19 USD</p>
+        <div class="price-current"><span>$6</span> USD</div>
+        <p class="price-subtitle">Menos que un cafÃ©. Acceso de por vida.</p>
+      </div>
+
+      <div class="urgency-cta reveal">
+        <a href="https://pay.hotmart.com/M104525562T?checkoutMode=10"
+           target="_blank" class="btn-primary btn-xl btn-full" style="max-width:520px;margin:0 auto;display:flex">
+          âœ… SÃ­, quiero el libro por $6
+        </a>
+        <div class="urgency-trust">
+          <span>ðŸ”’ Pago 100% seguro</span>
+          <span>ðŸ“§ Entrega inmediata al correo</span>
+          <span>âœ… GarantÃ­a 7 dÃ­as</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       GARANTÃA
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section" id="garantia">
+    <div class="container">
+      <div class="guarantee-card glass-card reveal">
+        <span class="guarantee-icon">ðŸ›¡ï¸</span>
+        <h2>GarantÃ­a de cero riesgo</h2>
+        <h3>Tu inversiÃ³n estÃ¡ protegida</h3>
+        <p>Si aplicas el mÃ©todo durante 7 dÃ­as y no sientes mÃ¡s claridad, control y poder de decisiÃ³n, solo tienes que escribirme.</p>
+        <p>No necesitas demostrar nada. No hay preguntas incÃ³modas. Solo dime que no fue para ti y te devuelvo cada centavo.</p>
+        <div class="guarantee-inner">
+          <p class="guarantee-inner-label">Â¿POR QUÃ‰ OFREZCO ESTO?</p>
+          <p>Porque confÃ­o completamente en este sistema. He visto a miles de personas transformar su relaciÃ³n con los lÃ­mites y la manipulaciÃ³n usando exactamente estos pasos. Si tÃº no obtienes resultados, no quiero tu dinero. AsÃ­ de simple.</p>
+        </div>
+        <p class="guarantee-final">Tu Ãºnico riesgo es seguir como hasta ahora.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       COMPARACIÃ“N FINAL
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="section" style="background:var(--bg-secondary)" id="decision">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="section-title">Tienes dos opciones</h2>
+      </div>
+      <div class="comparison-grid">
+        <div class="comparison-col comparison-bad reveal">
+          <h3>âŒ OPCIÃ“N 1: Seguir igual</h3>
+          <div class="comparison-item"><span>âŒ</span><span>Ceder cuando no quieres</span></div>
+          <div class="comparison-item"><span>âŒ</span><span>Detectar la manipulaciÃ³n tarde</span></div>
+          <div class="comparison-item"><span>âŒ</span><span>Sentir culpa al poner lÃ­mites</span></div>
+          <div class="comparison-item"><span>âŒ</span><span>Preguntarte si el problema eres tÃº</span></div>
+          <div class="comparison-item"><span>âŒ</span><span>Perder energÃ­a, tiempo y respeto</span></div>
+        </div>
+        <div class="comparison-col comparison-good reveal">
+          <h3>âœ… OPCIÃ“N 2: Tomar control</h3>
+          <div class="comparison-item"><span>âœ…</span><span>Reconocer manipulaciÃ³n al instante</span></div>
+          <div class="comparison-item"><span>âœ…</span><span>Responder con claridad y calma</span></div>
+          <div class="comparison-item"><span>âœ…</span><span>Establecer lÃ­mites sin culpa</span></div>
+          <div class="comparison-item"><span>âœ…</span><span>Recuperar tu poder de decisiÃ³n</span></div>
+          <div class="comparison-item"><span>âœ…</span><span>Mejorar tu rendimiento y paz mental</span></div>
+        </div>
+      </div>
+      <div class="comparison-cta reveal">
+        <a href="https://pay.hotmart.com/M104525562T?checkoutMode=10"
+           target="_blank" class="btn-primary btn-xl">
+          ðŸ“¥ Descargar ahora por $6
+        </a>
+      </div>
+      <div class="postdata reveal">
+        <strong>P.D.</strong> â€” Cada dÃ­a que sigues cediendo, refuerzas el patrÃ³n. La manipulaciÃ³n no desaparece sola. Se neutraliza. Con claridad. Con mÃ©todo. Con decisiÃ³n. Este libro te da las herramientas exactas. <strong>TÃº decides si las usas.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       FOOTER
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="David Academy" height="32"
+                 onerror="this.style.display='none'" />
+            <span class="footer-logo-text">David Academy</span>
+          </div>
+          <p class="footer-tagline">Domina tu mente. Domina tu dinero.</p>
+          <div class="footer-social">
+            <!-- REEMPLAZAR ESTOS ENLACES POR LOS REALES DE TUS REDES SOCIALES -->
+            <a href="#" title="YouTube">â–¶</a>
+            <a href="#" title="TikTok">â™ª</a>
+            <a href="#" title="Instagram">â—‰</a>
+            <a href="#" title="Facebook">f</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <a href="#metodo">El MÃ©todo</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#incluye">QuÃ© incluye</a>
+          <a href="#garantia">GarantÃ­a</a>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="#">Sobre nosotros</a>
+          <a href="#">Contacto</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">PolÃ­tica de privacidad</a>
+          <a href="#">TÃ©rminos de uso</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">Â© 2025 David Academy. Todos los derechos reservados.</p>
+        <div class="footer-cta-small">
+          <a href="https://pay.hotmart.com/M104525562T?checkoutMode=10"
+             target="_blank" class="btn-primary">
+            Obtener el libro â€” $6
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       JAVASCRIPT
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <script>
+    // â”€â”€ NAVBAR SCROLL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // â”€â”€ HAMBURGER MENU â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    function toggleMenu() {
+      document.querySelector('.navbar-links').classList.toggle('active');
+    }
+
+    // â”€â”€ SMOOTH SCROLL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // â”€â”€ COUNTDOWN TIMER (CORREGIDO) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    let timerInterval;
+    const DEADLINE_KEY = 'davidAcademyDeadline_v1';
+    let deadline = parseInt(localStorage.getItem(DEADLINE_KEY));
+    if (!deadline || deadline < Date.now()) {
+      deadline = Date.now() + (48 * 60 * 60 * 1000);
+      localStorage.setItem(DEADLINE_KEY, deadline);
+    }
+
+    function updateTimer() {
+      const remaining = Math.max(0, deadline - Date.now());
+      const h = Math.floor(remaining / 3600000);
+      const m = Math.floor((remaining % 3600000) / 60000);
+      const s = Math.floor((remaining % 60000) / 1000);
+      document.getElementById('timer-hours').textContent   = String(h).padStart(2, '0');
+      document.getElementById('timer-minutes').textContent = String(m).padStart(2, '0');
+      document.getElementById('timer-seconds').textContent = String(s).padStart(2, '0');
+      if (remaining <= 0 && timerInterval) clearInterval(timerInterval);
+    }
+    updateTimer();
+    timerInterval = setInterval(updateTimer, 1000);
+
+    // â”€â”€ SCROLL REVEAL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // â”€â”€ TIMELINE REVEAL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 150);
+          timelineObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.timeline-item').forEach(el => timelineObserver.observe(el));
+
+    // â”€â”€ PARTÃCULAS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    const particlesContainer = document.getElementById('particles');
+    if (particlesContainer) {
+      for (let i = 0; i < 20; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = Math.random() * 4 + 1;
+        p.style.cssText = `
+          width:${size}px; height:${size}px;
+          left:${Math.random() * 100}%;
+          top:${Math.random() * 100}%;
+          animation-delay:${Math.random() * 20}s;
+          animation-duration:${Math.random() * 15 + 15}s;
+          opacity:${Math.random() * 0.6 + 0.2};
+        `;
+        particlesContainer.appendChild(p);
+      }
+    }
+  </script>
+
+</body>
+</html>
+
